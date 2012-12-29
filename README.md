@@ -1,10 +1,10 @@
-Auto 3
-======
+Auto 3.0 _Euryale_
+==================
 
-Description
+Synopsis
 -----------
 
-Auto IRC Bot is an IRC channel bot that was created in
+Auto is an IRC channel bot that was created in
 December of 2009; over time, it progressed into a bot with an
 advanced and lightweight module API. Many of its features
 are modules and can be loaded/unloaded to your wish.
@@ -15,7 +15,8 @@ and should be included in the mainline program, you can
 contact us and request that your module be added to
 contributed modules. There is a chance that it will be accepted.
 
-Please do see **Moving Forward** below, and NOTICE.md.
+Please do see **Moving Forward** below for information regarding the new 4.0
+_Phoenix_, and NOTICE.md.
 
 Developers
 ----------
@@ -64,11 +65,15 @@ The following are required if built in a certain way:
 Moving Forward
 --------------
 
-The Auto Project has initiated a significant revision of Auto, version four.
-Please see the [official page here](http://git.io/autobot).
+The Auto Project has initiated a significant revision of Auto, 4.0 _Phoenix_,
+which although in-development at this time represents the latest and greatest
+of Auto. If this piques your curiosity, see the [official page](http://auto.autoproj.org).
 
-Moreover, note that Autumn (noxgirl, xoeverlux@gmail.com) has assumed
-leadership of the project.
+Currently, 4.0 is not ready for use in a productive environment. Support for
+3.0 is planned to continue indefinitely for the moment.
+
+You may find the [autobot-talk](http://j.mp/autotalk) mailing group to be of
+interest.
 
 Help, Bugs, Suggestions
 -----------------------
