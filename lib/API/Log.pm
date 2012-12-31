@@ -12,22 +12,7 @@ use Exporter;
 use base qw(Exporter);
 use API::Std qw(conf_get fpfmt);
 
-our @EXPORT_OK = qw(println dbug alog slog);
-
-
-# Print with the system newline appended.
-sub println {
-    my ($out) = @_;
-
-    if (!defined $out) {
-        print $RS;
-    }
-    else {
-        print $out.$RS;
-    }
-
-    return 1;
-}
+our @EXPORT_OK = qw(dbug alog slog);
 
 # Print only if in debug mode.
 sub dbug {
