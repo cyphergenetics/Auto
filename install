@@ -138,7 +138,7 @@ println 'Would you like us to install missing CPAN modules for you?  You may hav
 my $cpanresponse = <STDIN>;
 chomp $cpanresponse;
 if (lc $cpanresponse eq 'y') { 
-our $getcpan = 1;
+    our $getcpan = 1;
 }
 
 # Check for required CPAN modules.
