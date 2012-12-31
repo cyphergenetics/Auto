@@ -81,43 +81,6 @@ eval {
     require 5.010_000;
 } or println "This version of Perl is too old. Upgrade to Perl 5.10.0 or later and try again." and exit;
 
-# Check operating system.
-print "Checking operating system..... $OSNAME - ";
-if ($OSNAME =~ /dos/i) {
-    print "DOS is not supported.\r\n";
-    exit;
-}
-elsif ($OSNAME eq "MSWin32") {
-    print "OK\r\n";
-}
-elsif ($OSNAME eq "NetWare") {
-    print "NetWare is not supported.\r\n";
-    exit;
-}
-elsif ($OSNAME eq "linux") {
-    print "OK\n";
-}
-elsif ($OSNAME eq "os2") {
-    print "IBM OS/2 is not supported.\r\n";
-    exit;
-}
-elsif ($OSNAME =~ /mac/i or $OSNAME =~ /darwin/i) {
-    print "OK\r";
-}
-elsif ($OSNAME eq "freebsd") {
-    print "OK\n";
-}
-elsif ($OSNAME eq "openbsd") {
-    print "OK\n";
-}
-elsif ($OSNAME eq "solaris") {
-    print "OK\n";
-}
-else {
-    print "Unknown operating system. Contact support.\r\n";
-    exit;
-}    	
-
 # Check for Perl core modules.
 println "Checking for core Perl modules.....";
 checkcore();
