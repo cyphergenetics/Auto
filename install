@@ -6,7 +6,6 @@
 package Install;
 use strict;
 use warnings;
-use CPAN;
 use Getopt::Long;
 use English qw(-no_match_vars);
 use FindBin qw($Bin);
@@ -19,8 +18,6 @@ use Lib::Install;
 # Installation script.
 our $VERSION = 1.00;
 our $ERROR = 0;
-our @needed;
-our $getcpan = 0;
 
 # Store the arguments passed to us.
 my ($opt_help, $opt_syswide, $PREFIX, $feature_nossl, $feature_sasl, $feature_ipv6, $feature_mysql, $feature_pgsql);
@@ -133,14 +130,6 @@ else {
     println "All good.";
 }
 
-println "\0";
-println 'Would you like us to install missing CPAN modules for you?  You may have to enter your sudo password. [y/n] ';
-my $cpanresponse = <STDIN>;
-chomp $cpanresponse;
-if (lc $cpanresponse eq 'y') { 
-    our $getcpan = 1;
-}
-
 # Check for required CPAN modules.
 println "\0";
 println 'Checking for required CPAN modules......';
@@ -159,17 +148,13 @@ modfind('IO::Socket::SSL') if $features =~ /ssl/;
 modfind('MIME::Base64') if $features =~ /sasl/;
 println "\0";
 
-if ($ERROR == 1) {
+if ($ERROR) {
     println "Failed to install. Please install the missing CPAN modules and try again.";
     exit;
 }
-elsif ($ERROR == 2) {
-    foreach (@needed) {
-        CPAN::Shell->install($_);
-    }	
+else {
+    println "All good.";
 }
-println "All good.";
-
 
 # Create build.
 println "\0";

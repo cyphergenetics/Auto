@@ -28,17 +28,7 @@ sub modfind {
     my ($mod) = @_;
 
     print "    $mod: ";
-    if (!eval('require '.$mod.'; 1;')) {
-        println "Not Found";
-        if ($Install::getcpan == 1) {
-            push(@Install::needed, $mod);
-            $Install::ERROR = 2;
-        }
-        else {
-            $Install::ERROR = 1;
-        }
-    }
-else { println "Found"; }
+    eval('require '.$mod.'; 1;') and println "Found" or println "Not Found" and $Install::ERROR = 1;
 
     return 1;
 }
