@@ -165,7 +165,7 @@ if ($ERROR == 1) {
 }
 elsif ($ERROR == 2) {
     foreach (@needed) {
-        system(sudo cpan => $_);
+        system(cpan => $_);
     }	
 }
 println "All good.";
