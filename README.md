@@ -27,6 +27,7 @@ maintenance of Auto, and other projects.
 
 - [mattwb65](https://github.com/mattwb65) &lt;mattwb65@gmail.com&gt;
 - [noxgirl](https://github.com/noxgirl) &lt;xoeverlux@gmail.com&gt;
+- [TheNull](https://github.com/TheNull) &lt;thenull2.0@gmail.com&gt;
 
 Inactive
 
