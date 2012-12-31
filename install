@@ -6,7 +6,7 @@
 package Install;
 use strict;
 use warnings;
-#`use Term::Prompt;
+use CPAN;
 use Getopt::Long;
 use English qw(-no_match_vars);
 use FindBin qw($Bin);
@@ -165,7 +165,7 @@ if ($ERROR == 1) {
 }
 elsif ($ERROR == 2) {
     foreach (@needed) {
-        system(cpan => $_);
+        CPAN::Shell->install($_);
     }	
 }
 println "All good.";
