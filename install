@@ -139,7 +139,6 @@ my $cpanresponse = <STDIN>;
 chomp $cpanresponse;
 if (lc $cpanresponse eq 'y') { 
 our $getcpan = 1;
-println $getcpan;
 }
 
 # Check for required CPAN modules.
@@ -166,7 +165,6 @@ if ($ERROR == 1) {
 }
 elsif ($ERROR == 2) {
     foreach (@needed) {
-        println $_;
         system(sudo cpan => $_);
     }	
 }
